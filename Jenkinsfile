@@ -7,8 +7,7 @@ pipeline {
         stage('Build') {
             steps {
                 sh 'echo "Start"'
-                sh 'sleep 15'
-                echo "${params.DEPLOY_TO_VIP} World!"
+                echo "${params.DEPLOY_TO_VIP}"
                 sh 'echo "End"'
             }
         }
