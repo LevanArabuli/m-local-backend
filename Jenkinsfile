@@ -21,7 +21,7 @@ pipeline {
                     //sh 'git reset --hard'
                     //sh 'git checkout -b develop-built vip/develop-built'
 
-                    sh 'git merge -X theirs origin/develop'
+                    //sh 'git merge -X theirs origin/develop'
                     
                     //sh 'yarn build-ci'
                     //sh 'git add build -f'
