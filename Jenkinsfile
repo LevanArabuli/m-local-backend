@@ -12,7 +12,7 @@ pipeline {
             }            
             steps {
                 withCredentials([usernameColonPassword(credentialsId: 'd27d46c6-9296-48aa-85e8-0d3b7fcdf8ae', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-                    echo "${GIT_USERNAME}"
+                    sh "git --version"
 
                     //sh 'git remote add vip https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/sadamia/m-remote-frontend.git'
                     //sh 'git fetch vip'
