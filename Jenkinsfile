@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(name: 'DEPLOY_TO_VIP', defaultValue: false, description: 'Deploy to frontend and backend to VIP repo')
+        booleanParam(name: 'DEPLOY_TO_VIP', defaultValue: false, description: 'Deploy frontend and graphql to VIP repos')
     }
     stages {
         stage('Build') {
