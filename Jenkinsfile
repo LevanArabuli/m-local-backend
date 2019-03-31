@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(name: 'DEPLOY_TO_VIP', defaultValue: false, description: '')
+        booleanParam(name: 'DEPLOY_TO_VIP', defaultValue: false, description: 'Deploy to VIP')
     }
     stages {
         stage('Build') {
