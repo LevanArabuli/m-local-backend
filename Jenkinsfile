@@ -11,7 +11,7 @@ pipeline {
                 }
             }            
             steps {
-                withCredentials([usernameColonPassword(credentialsId: 'd27d46c6-9296-48aa-85e8-0d3b7fcdf8ae', variable: 'sandro')]) {
+                withCredentials([usernameColonPassword(credentialsId: 'd27d46c6-9296-48aa-85e8-0d3b7fcdf8ae', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                     sh 'git config --global user.email "aleksandre.adamia@gmail.com"'
                     sh 'git config --global user.name "sadamia"'
                     
