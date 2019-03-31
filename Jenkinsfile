@@ -1,7 +1,7 @@
 pipeline {
     agent any
     parameters {
-        booleanParam(name: 'DEPLOY_TO_VIP', defaultValue: false, description: 'Deploy frontend and graphql to VIP repos')
+        booleanParam(name: 'DEPLOY_TO_VIP', defaultValue: false, description: 'Deploy frontend and graphql repos to VIP')
     }
     stages {
         stage('Build') {
@@ -12,11 +12,9 @@ pipeline {
             }            
             steps {
                 withCredentials([usernameColonPassword(credentialsId: 'd27d46c6-9296-48aa-85e8-0d3b7fcdf8ae', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
-                    sh "git --version"
-
                     //sh 'git remote add vip https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/sadamia/m-remote-frontend.git'
                     //sh 'git fetch vip'
-                
+                    echo "hi"
                     //sh 'git reset --hard'
                     //sh 'git checkout -b develop-built vip/develop-built'
 
