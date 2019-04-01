@@ -14,7 +14,7 @@ pipeline {
             steps {
                 echo "${params.DEPLOY_TO_VIP}"
                 echo "${env.TEST}"
-                                echo "${params.TEST}"
+                echo "${params.TEST}"
             }
         }
     }
