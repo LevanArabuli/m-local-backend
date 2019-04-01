@@ -11,7 +11,9 @@ pipeline {
                 }
             }            
             steps {
-                echo "${params.parameter1}"
+                echo "${params.DEPLOY_TO_VIP}"
+                echo "${env.parameter1}"
+                
             }
         }
     }
