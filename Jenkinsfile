@@ -1,9 +1,5 @@
 pipeline {
-    agent {
-        docker {
-            image 'ubuntu'
-        }
-    }
+    agent any
     parameters {
         booleanParam(name: 'DEPLOY_TO_VIP', defaultValue: false, description: 'Deploy frontend and graphql repos to VIP')
     }
