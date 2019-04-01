@@ -7,7 +7,7 @@ pipeline {
         stage('Build') {
             when {
                 expression {
-                    BRANCH_NAME ==~ /(master|develop)/ && params.DEPLOY_TO_VIP == true
+                    BRANCH_NAME ==~ /(master|develop)/
                 }
             }            
             steps {
