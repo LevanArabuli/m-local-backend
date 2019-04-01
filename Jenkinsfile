@@ -2,7 +2,7 @@ pipeline {
     agent none
     parameters {
         booleanParam(name: 'DEPLOY_TO_VIP', defaultValue: false, description: 'Deploy to VIP')
-        string(name: 'TEST', defaultValue: 'Mr Jenkins', description: 'Who should I say hello to?')
+        string(name: 'TEST', defaultValue: 'Jenkins', description: 'Who should I say hello to?')
     }
     stages {
         stage('Build') {
