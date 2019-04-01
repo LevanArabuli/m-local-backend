@@ -29,7 +29,7 @@ pipeline {
                     //sh 'git push vip develop-built'                
                     //sh 'echo "Start"'
                 }
-                echo "${params.DEPLOY_TO_VIP}"
+                echo "${env.DEPLOY_TO_VIP}"
             }
         }
     }
