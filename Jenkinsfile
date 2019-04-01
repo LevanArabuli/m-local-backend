@@ -13,6 +13,7 @@ pipeline {
             }            
             steps {
                 echo "${params.DEPLOY_TO_VIP}"
+                echo "${env.TEST}"
             }
         }
     }
