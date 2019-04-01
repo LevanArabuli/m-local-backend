@@ -12,7 +12,7 @@ pipeline {
             }            
             steps {
                 echo "${params.DEPLOY_TO_VIP}"
-                echo "${env.parameter1}"
+                echo "${env.TEST}"
                 
             }
         }
