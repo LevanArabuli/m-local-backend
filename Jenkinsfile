@@ -5,11 +5,7 @@ pipeline {
     }
     stages {
         stage('Build') {
-            when {
-                expression {
-                    BRANCH_NAME ==~ /(master|develop)/ && params.DEPLOY_TO_VIP == true
-                }
-            }            
+          
             steps {
                 withCredentials([usernameColonPassword(credentialsId: 'd27d46c6-9296-48aa-85e8-0d3b7fcdf8ae', passwordVariable: 'GIT_PASSWORD', usernameVariable: 'GIT_USERNAME')]) {
                     //sh 'git remote add vip https://${GIT_USERNAME}:${GIT_PASSWORD}@github.com/sadamia/m-remote-frontend.git'
